@@ -1,50 +1,80 @@
 <template>
-  <div class="container">
-    <Header></Header>
-    <div class="border border-secondary">
-      <section class="relative">
-        <img :src="bannerImg" alt="banner" />
-        <img
-          class="absolute top-[63px] left-[43px]"
-          :src="banner_ani"
-          alt="banner_ani"
-        />
-        <h1
-          class="absolute bottom-[204px] right-[77px] text-[48px] tracking-[.135em] text-main"
-        >
-          The F2E 4th 互動式網頁設計
-        </h1>
-      </section>
-      <section class="bg-[#FDF7E8] py-[88px] px-[220px] text-center">
-        <div class="flex flex-col gap-y-10">
-          <h2 class="text-[32px] tracking-[.15em]">你是否也遇到以下問題?</h2>
-          <div class="border border-secondary bg-white py-3">
-            羨慕別人的酷酷網頁動畫？
-          </div>
-          <div class="border border-secondary bg-white py-3">
-            滿足不了同事的許願？
-          </div>
-          <div class="border border-secondary bg-white py-3">
-            動畫技能樹太雜無從下手？
-          </div>
-        </div>
-      </section>
+  <Header></Header>
+  <!-- <div class="container"> -->
+
+  <section class="overflow-hidden bg-Orange-light pt-[65px]">
+    <!-- <img :src="bannerImg" alt="banner" />
+    <img
+      class="absolute top-[63px] left-[43px]"
+      :src="banner_ani"
+      alt="banner_ani"
+    /> -->
+    <h1 class="flex flex-col gap-y-4 text-center text-Black900">
+      <span class="text-stroke text-[40px] tracking-widest text-transparent"
+        >4th</span
+      >
+      <span
+        class="text-stroke -mt-2 text-[80px] tracking-widest text-transparent"
+        >The F2E</span
+      >
+      <span class="text-[52px] tracking-widest">互動式網頁設計</span>
+      <span class="text-[32px] font-medium tracking-widest"
+        >前端 & UI 修煉精神時光屋</span
+      >
+    </h1>
+
+    <div class="text-center">
+      <a
+        class="relative flex border border-black bg-white p-3 tracking-widest after:hover:h-full after:hover:w-full after:hover:translate-x-1 after:hover:translate-y-1 after:hover:bg-black"
+        href="#"
+        >點擊立刻報名<img :src="imgUrl.arrowRight" alt="rightArrow"
+      /></a>
     </div>
-  </div>
+
+    <div class="mt-[216px] flex gap-x-[30px]">
+      <span class="text-[80px] text-white">TheF2E</span>
+      <span class="text-[80px] text-white">TheF2E</span>
+      <span class="text-[80px] text-white">TheF2E</span>
+      <span class="text-[80px] text-white">TheF2E</span>
+      <span class="text-[80px] text-white">TheF2E</span>
+      <span class="text-[80px] text-white">TheF2E</span>
+    </div>
+  </section>
+  <section class="bg-[#FDF7E8] py-[88px] px-[220px] text-center">
+    <div class="flex flex-col gap-y-10">
+      <h2 class="text-[32px] tracking-widest">你是否也遇到以下問題?</h2>
+      <div class="border border-secondary bg-white py-3">
+        羨慕別人的酷酷網頁動畫？
+      </div>
+      <div class="border border-secondary bg-white py-3">
+        滿足不了同事的許願？
+      </div>
+      <div class="border border-secondary bg-white py-3">
+        動畫技能樹太雜無從下手？
+      </div>
+    </div>
+  </section>
+
+  <!-- </div> -->
 </template>
 
 <script>
 import Header from './components/Header.vue'
-import banner from '@/assets/banner.png'
-import banner_ani from '@/assets/banner-ani.svg'
+
+import arrowRight from '@/assets/Union.svg'
+import star from '@/assets/banner/star1.png'
+
 export default {
   components: {
     Header,
   },
   data() {
     return {
-      bannerImg: banner,
-      banner_ani: banner_ani,
+      // bannerImg: banner,
+      imgUrl: {
+        arrowRight: arrowRight,
+        star: star,
+      },
     }
   },
 }
