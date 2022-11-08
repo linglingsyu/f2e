@@ -1,7 +1,11 @@
 <template>
   <Header></Header>
   <!-- <div class="container"> -->
-
+  <a
+    class="relative inline-flex border border-black bg-white p-3 tracking-widest after:absolute after:top-0 after:left-0 after:-z-10 after:h-full after:w-full after:bg-black hover:after:translate-x-1 hover:after:translate-y-1"
+    href="#"
+    >點擊立刻報名</a
+  >
   <section class="overflow-hidden bg-Orange-light pt-[65px]">
     <!-- <img :src="bannerImg" alt="banner" />
     <img
@@ -25,19 +29,30 @@
 
     <div class="text-center">
       <a
-        class="relative flex border border-black bg-white p-3 tracking-widest after:hover:h-full after:hover:w-full after:hover:translate-x-1 after:hover:translate-y-1 after:hover:bg-black"
+        class="relative isolate inline-flex border border-black bg-white p-3 tracking-widest after:absolute after:top-0 after:left-0 after:h-full after:w-full after:bg-black hover:after:translate-x-1 hover:after:translate-y-1"
         href="#"
         >點擊立刻報名<img :src="imgUrl.arrowRight" alt="rightArrow"
       /></a>
+
+      <!-- <a
+        class="relative inline-flex border border-black bg-white p-3 tracking-widest after:absolute after:top-0 after:left-0 after:-z-10 after:h-full after:w-full after:bg-black hover:after:translate-x-1 after:hover:translate-y-1"
+        href="#"
+        >點擊立刻報名</a
+      > -->
     </div>
 
-    <div class="mt-[216px] flex gap-x-[30px]">
-      <span class="text-[80px] text-white">TheF2E</span>
-      <span class="text-[80px] text-white">TheF2E</span>
-      <span class="text-[80px] text-white">TheF2E</span>
-      <span class="text-[80px] text-white">TheF2E</span>
-      <span class="text-[80px] text-white">TheF2E</span>
-      <span class="text-[80px] text-white">TheF2E</span>
+    <div
+      class="pl-[121px] pb-[272px] font-[Georama] text-[52px] italic tracking-widest"
+    >
+      FRONT END
+    </div>
+    <div class="mt-[216px] flex gap-x-[30px] text-[80px] text-white">
+      <span>TheF2E</span>
+      <span>TheF2E</span>
+      <span>TheF2E</span>
+      <span>TheF2E</span>
+      <span>TheF2E</span>
+      <span>TheF2E</span>
     </div>
   </section>
   <section class="bg-[#FDF7E8] py-[88px] px-[220px] text-center">
