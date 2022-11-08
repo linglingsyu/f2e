@@ -1,54 +1,101 @@
 <template>
-  <div
-    class="mb-6 flex items-center justify-between border-b border-b-black px-8 py-6"
-  >
-    <a href="#"><img :src="logoSrc" alt="logo" /></a>
-    <div class="relative">
-      <a class="lg:hidden" @click.prevent="isMobile = !isMobile" href="#">
-        <img :src="menu" alt="menu"
-      /></a>
-      <Transition>
-        <ul
-          class="absolute right-0 top-8 flex min-h-[200px] w-[150px] flex-col gap-y-6 rounded bg-slate-50 px-4 py-6 text-center lg:hidden"
-          v-if="isMobile"
-        >
-          <li><a class="text-Green-dark" href="#">關卡資訊</a></li>
-          <li><a class="text-Green-dark" href="#">作品列表</a></li>
-          <li><a class="text-Green-dark" href="#">攻略資源</a></li>
-          <li><a class="text-Green-dark" href="#">求職專區</a></li>
-          <li>
-            <a class="rounded-[3px] bg-Green-dark p-[10px] text-white" href="#"
-              >我要報名</a
-            >
-          </li>
-        </ul>
-      </Transition>
+  <!-- 手機板選單 -->
+  <transition>
+    <div
+      class="fixed top-0 left-0 bottom-0 right-0 z-10 block bg-secondary/80 md:hidden"
+      v-if="isMobile"
+    ></div>
+  </transition>
+  <img
+    src="@/assets/bg/bg_menuSide.png"
+    class="fixed top-0 left-0 hidden h-screen w-5 object-cover md:block"
+    alt="bg_menuSide.png"
+    v-if="!isMobile"
+  />
+  <transition>
+    <div
+      class="fixed top-0 left-0 z-20 h-full w-2/6 md:w-[135px]"
+      v-if="isMobile"
+    >
+      <ul
+        class="flex h-full w-full flex-col flex-wrap items-center gap-y-10 bg-main px-5 pt-10 text-center text-t18 text-secondary"
+      >
+        <li>
+          <a
+            class="flex flex-col flex-wrap items-center justify-center"
+            href="#"
+            ><img
+              class="h-[60px] w-[60px] object-cover"
+              src="@/assets/ic/ic_menu_info.png"
+              alt="ic_menu_info.png"
+            />
+            <span>關卡資訊</span></a
+          >
+        </li>
+        <li>
+          <a
+            class="flex flex-col flex-wrap items-center justify-center"
+            href="#"
+            ><img
+              class="h-[60px] w-[60px] object-cover"
+              src="@/assets/ic/ic_menu_list.png"
+              alt="ic_menu_list.png"
+            />
+            <span>作品列表</span></a
+          >
+        </li>
+        <li>
+          <a
+            class="flex flex-col flex-wrap items-center justify-center"
+            href="#"
+            ><img
+              class="h-[60px] w-[60px] object-cover"
+              src="@/assets/ic/ic_menu_strategy.png"
+              alt="ic_menu_strategy.png"
+            />
+            <span>攻略資源</span></a
+          >
+        </li>
+        <li>
+          <a
+            class="flex flex-col flex-wrap items-center justify-center"
+            href="#"
+            ><img
+              class="h-[60px] w-[60px] object-cover"
+              src="@/assets/ic/ic_menu_job.png"
+              alt="ic_menu_job.png"
+            />
+            <span>求職專區</span></a
+          >
+        </li>
+      </ul>
+      <img
+        @click="isMobile = !isMobile"
+        class="absolute top-3 -right-10 h-10 w-10 object-cover md:top-1/2"
+        src="@/assets/btn/btn_burger_close.png"
+        alt="btn_burger_close.png"
+      />
     </div>
-    <ul class="hidden gap-x-9 lg:flex">
-      <li><a class="text-Green-dark" href="#">關卡資訊</a></li>
-      <li><a class="text-Green-dark" href="#">作品列表</a></li>
-      <li><a class="text-Green-dark" href="#">攻略資源</a></li>
-      <li><a class="text-Green-dark" href="#">求職專區</a></li>
-      <li>
-        <a class="rounded-[3px] bg-Green-dark p-[10px] text-white" href="#"
-          >我要報名</a
-        >
-      </li>
-    </ul>
-  </div>
+  </transition>
+  <img
+    @click="isMobile = !isMobile"
+    class="fixed top-3 left-0 h-10 w-10 object-cover md:top-1/2 md:left-5"
+    src="@/assets/btn/btn_burger_open.png"
+    alt="btn_burger_open.png"
+  />
+  <!-- 手機板選單 End -->
 </template>
 
 <script>
-import imgUrl from '@/assets/logo.svg'
-import menu from '@/assets/menu.svg'
 export default {
   //
   data() {
     return {
-      isMobile: false,
-      logoSrc: imgUrl,
-      menu: menu,
+      isMobile: true,
     }
+  },
+  methods: {
+    toggoleMenu() {},
   },
 }
 </script>

@@ -1,76 +1,6 @@
 <template>
   <Header></Header>
-  <!-- <div class="container"> -->
-  <a
-    class="relative inline-flex border border-black bg-white p-3 tracking-widest after:absolute after:top-0 after:left-0 after:-z-10 after:h-full after:w-full after:bg-black hover:after:translate-x-1 hover:after:translate-y-1"
-    href="#"
-    >點擊立刻報名</a
-  >
-  <section class="overflow-hidden bg-Orange-light pt-[65px]">
-    <!-- <img :src="bannerImg" alt="banner" />
-    <img
-      class="absolute top-[63px] left-[43px]"
-      :src="banner_ani"
-      alt="banner_ani"
-    /> -->
-    <h1 class="flex flex-col gap-y-4 text-center text-Black900">
-      <span class="text-stroke text-[40px] tracking-widest text-transparent"
-        >4th</span
-      >
-      <span
-        class="text-stroke -mt-2 text-[80px] tracking-widest text-transparent"
-        >The F2E</span
-      >
-      <span class="text-[52px] tracking-widest">互動式網頁設計</span>
-      <span class="text-[32px] font-medium tracking-widest"
-        >前端 & UI 修煉精神時光屋</span
-      >
-    </h1>
-
-    <div class="text-center">
-      <a
-        class="relative isolate inline-flex border border-black bg-white p-3 tracking-widest after:absolute after:top-0 after:left-0 after:h-full after:w-full after:bg-black hover:after:translate-x-1 hover:after:translate-y-1"
-        href="#"
-        >點擊立刻報名<img :src="imgUrl.arrowRight" alt="rightArrow"
-      /></a>
-
-      <!-- <a
-        class="relative inline-flex border border-black bg-white p-3 tracking-widest after:absolute after:top-0 after:left-0 after:-z-10 after:h-full after:w-full after:bg-black hover:after:translate-x-1 after:hover:translate-y-1"
-        href="#"
-        >點擊立刻報名</a
-      > -->
-    </div>
-
-    <div
-      class="pl-[121px] pb-[272px] font-[Georama] text-[52px] italic tracking-widest"
-    >
-      FRONT END
-    </div>
-    <div class="mt-[216px] flex gap-x-[30px] text-[80px] text-white">
-      <span>TheF2E</span>
-      <span>TheF2E</span>
-      <span>TheF2E</span>
-      <span>TheF2E</span>
-      <span>TheF2E</span>
-      <span>TheF2E</span>
-    </div>
-  </section>
-  <section class="bg-[#FDF7E8] py-[88px] px-[220px] text-center">
-    <div class="flex flex-col gap-y-10">
-      <h2 class="text-[32px] tracking-widest">你是否也遇到以下問題?</h2>
-      <div class="border border-secondary bg-white py-3">
-        羨慕別人的酷酷網頁動畫？
-      </div>
-      <div class="border border-secondary bg-white py-3">
-        滿足不了同事的許願？
-      </div>
-      <div class="border border-secondary bg-white py-3">
-        動畫技能樹太雜無從下手？
-      </div>
-    </div>
-  </section>
-
-  <!-- </div> -->
+  
 </template>
 
 <script>
@@ -78,6 +8,8 @@ import Header from './components/Header.vue'
 
 import arrowRight from '@/assets/Union.svg'
 import star from '@/assets/banner/star1.png'
+import bg2 from '@/assets/banner/circle.svg'
+import Group31 from '@/assets/banner/Group31.png'
 
 export default {
   components: {
@@ -89,6 +21,8 @@ export default {
       imgUrl: {
         arrowRight: arrowRight,
         star: star,
+        circle: bg2,
+        bg1: Group31,
       },
     }
   },
