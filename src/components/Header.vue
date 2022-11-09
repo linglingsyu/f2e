@@ -84,6 +84,13 @@
     alt="btn_burger_open.png"
   />
   <!-- 手機板選單 End -->
+  <a class="fixed top-3 right-3" href="https://2022.thef2e.com/users">
+    <img
+      class=" h-10 w-10 object-cover"
+      src="@/assets/btn/btn_user.png"
+      alt="btn_user.png"
+    />
+  </a>
 </template>
 
 <script>
